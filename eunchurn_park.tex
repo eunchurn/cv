@@ -1,0 +1,181 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\usepackage[cjk]{kotex}
+\usepackage[backend=biber]{biblatex}
+%% sample.bib contains your publications
+\addbibresource{eunchurn.bib}
+% \usepackage{dhucs-nanumfont}
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{2c3e50}
+\definecolor{SlateGrey}{HTML}{34495e}
+\definecolor{LightGrey}{HTML}{7f8c8d}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Eunchurn Park}
+\tagline{Full-stack developer, Architectural engineer, Data scientist}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{profile}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{eunchurn.park@gmail.com}
+    \phone{+82-10-4215-6420}
+  \location{Seoul, Republic of Korea}
+  
+  %  \linkedin{linkedin.com/in/ismailshaikh}
+    \github{github.com/eunchurn} \printinfo{\faUniversity}{researchgate.net/profile/eunchurn\_park} \printinfo{\faHome}{https://eunchurn.com}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection. 
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Full-stack developer \& PI in R\&D}{APROS CO., LTD.}{Mar 2018 -- Ongoing}{Seoul, Korea}
+\begin{itemize}
+\item 스마트팩토리 IIoT PdM 플랫폼 개발: Linux Application(Gateway), IIoT Protocol, Web Application(Full-stack: Docker-composer, NodeJS, Python, MongoDB, Redis, GraphQL, ReactJS,...).
+\item 멀티채널 DAQ 애플리케이션 개발: RT Linux Kernel patch(Yocto, Xenomai, Preempt\_RT), NodeJS N-API, C++.
+\item IIoT 보안 펌웨어 개발: X.509 경량화 인증서 개발 
+\item 스마트팩토리 관련 R\&D 프로젝트
+\end{itemize}
+
+\divider
+
+\cvevent{Full-stack developer \& Project Team Leader \& PI in R\&D}{S.H. Tech. \& Policy Institute}{Aug. 2015 -- Jan. 2018}{Seoul, Korea}
+\begin{itemize}
+\item 재난 대응 M2M 시스템 개발: 센서 모니터링 플랫폼 개발(Full-stack: NodeJS, Redis, MongoDB, Python), 센서 데이터 기반 주요요소분석 및 Markov-chain룰 기반 상태예측 알고리즘 개발, 현장 Deployment 수행
+\item 한국철도공사 관련 프로젝트 개발: OpenCV기반 재해우려개소 낙석감지 시스템, OpenCV 기반 KTX 승객검표지원 시스템, 콘크리트 도상 균열 식별 프로그램 개발
+\item 수자원공사 및 한국철도공사 R\&D 프로젝트 수행: 연구책임자
+\end{itemize}
+
+\divider
+
+\cvevent{Research Engineer \& Algorithm developer}{Korea Maintenance CO., LTD.}{Apr. 2009 -- May 2015}{Seoul, Korea}
+\begin{itemize}
+\item 초고층 건물의 GPS 망보정기법과 외란보정 기법을 이용한 거푸집 연직도 관리: Multirate-Kalman Filter, GNSS-RTK, Ordinary Procrustes Analysis, Fourier linear combiner등의 알고리즘을 개발 및 현장 적용, 건설신기술 인증 국토해양부고시 제2011-313호
+\item 한국철도공사 공항철도 및 KTX 진동가속도 분석 시스템: 열차 주행안정성 평가 알고리즘 개발, slip/slide 및 승차감 분석 프로그램 개발(CWA-FRF, ISO 2631-1, UIC-513, UIC-518OR)
+\item LCD Display 글래스 이송로봇진동 사전감지시스템(Early Warning System) 개발: Prediction management, Block Hankel matrix based signal decomposition, Wavelet analysis, Cepstrum analysis등 개발
+\item 초고층 건물 구조 건전도 모니터링(structural health monitoring) 및 능동형 제진장치 모니터링 시스템 개발: 고감도 가속도 센서 기반 DAQ 개발, 시각동기화기술 개발(IEEE-1588 PTP protocol, Kalman filter), EPGA, Stochastic subspace identification 알고리즘 개발
+\end{itemize}
+
+\divider
+
+% \cvevent{Product Manager \& UI Lead}{Google}{Oct 2001 -- July 2005}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Appointed by the founder Larry Page in 2001 to lead the Product Management and User Interaction teams
+% \item Optimized Google's homepage and A/B tested every minor detail to increase usability (incl.~spacing between words, % color schemes and pixel-by-pixel element alignment)
+% \end{itemize}
+%
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+% \cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \wheelchart{1.5cm}{0.5cm}{%
+%   25/10em/accent!30/\footnotesize\\[1ex]Sleeping \& dreaming about work,
+%   20/9em/accent!60/\footnotesize\\[1ex]Spending time with family,
+%   5/13em/accent!10/\footnotesize\\[1ex]Hobbies,
+%   20/15em/accent!40/\footnotesize\\[1ex]Working with stakeholders to define smooth business continuity,
+%   30/10em/accent/\footnotesize\\[1ex]Overseeing provision of end-user services\, including help desk and technical support services,
+%   5/8em/accent!20/\footnotesize\\[1ex]Planning out task for upcoming day
+% }
+
+\clearpage
+\begin{fullwidth}
+\cvsection[page2sidebar]{Publications}
+% 
+\nocite{*}
+\printbibliography[type=thesis, heading=pubtype,title={\printinfo{\faBook}{Dissertation}}]
+% 
+% \printbibliography[type=book, heading=pubtype,title={\printinfo{\faBook}{Books}}]
+% % 
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles (SCI/SCI-E)}}, type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+\end{fullwidth}
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
