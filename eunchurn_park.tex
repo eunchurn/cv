@@ -401,6 +401,120 @@
 \item 참여한 현장: 강변 테크노마트 AMD 시공 프로젝트
 \end{itemize}
 
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{도로 안개 소산 시스템 프로젝트}}{Korea Maintenance}{2014 -- 2019}{Seoul, Korea}
+
+\begin{itemize}
+\item 소개: 온풍, 음이온 생성기, 응결핵등을 방사하여 도로상에 안개를 신속히 제거하는 시스템
+\item 실제 수행한 주요 이력
+  \begin{itemize}
+    \item CCTV 영상이미지를 이용한 안개시정거리 계산: \href{https://en.wikipedia.org/wiki/Feature_detection_(computer_vision)}{Feature detection}
+    \item 오브젝트 트래킹 문제: \href{https://en.wikipedia.org/wiki/Partial_least_squares_regression}{Partial least square analysis}를 통해 타깃의 위치 판탄 (2stage filtering)
+    \item \href{http://www4.comp.polyu.edu.hk/~cslzhang/CT/CT.htm}{Real-time compressive tracking}: \href{https://en.wikipedia.org/wiki/Filter_bank}{multiscale filterbank}를 통해 \href{https://en.wikipedia.org/wiki/Feature_detection_(computer_vision)}{feature detection} 후 매트릭스방식의 feature를 벡터화
+    \item 오브젝트 트래킹 에러로 success rate, average center location error를 판단하여 시정거리와 매핑.
+    \item \href{https://siddhantahuja.wordpress.com/tag/sum-of-squared-differences/}{Sum of squared difference} \/ \href{https://en.wikipedia.org/wiki/Cross-correlation\#Normalized_cross-correlation}{Normalized cross-correlation} 으로 최종 매핑 스코어 판정
+    \item CCTV 이미지를 통해 안개소산장치를 ON/OFF 제어 : 평균화 방식의 \href{https://en.wikipedia.org/wiki/PID_controller}{PID 제어기}로 설계
+  \end{itemize}
+\end{itemize}
+
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{지하철 역사 초기 재난 대응 M2M 대피경로 안내 시스템}}{승화기술정책연구소(주)}{2015 -- 2017}{Seoul, Korea}
+
+\begin{itemize}
+\item
+  소개: 가스센서 노드로부터 데이터를 받아 화재 및 재난을 초기 인식하여 승객들에게 대피경로를 안내하는 시스템
+\item
+  실제 수행한 주요 이력:
+  \begin{itemize}
+    \item Libelium Waspmote기반 가스센서 펌웨어 개발
+    \item 가스센서 Calibration : MATLAB을 이용하여 기준값 측정 후 곡선적합
+    \item 게이트웨이 개발: Raspberry Pi \href{https://nodejs.org}{nodeJS} 애플리케이션(serial parsing, mysql, 웹서버 및 UI가동)
+    \item 센서노드 API 제작(Plug\&Sense): sleep time 스케쥴링
+    \item 화재 감지 및 화재 발생 위치 분석: 주요요소분석(principal component analysis, 각 센서데이터의 확률밀도함수와 이벤트간 주요요소분석), 확률변수시물레이션(Monte-Carlo 시물레이션)
+    \item Markov-chain 룰을 통해 상태예측 알고리즘 개발
+  \end{itemize}
+\item 적용된 기술:
+  \begin{itemize} 
+    \item \href{https://en.wikipedia.org/wiki/Machine_to_machine}{M2M}
+    \item \href{https://lora-alliance.org/}{LoRa} 802.11ah SX1274 916MHz
+    \item \href{https://en.wikipedia.org/wiki/Principal_component_analysis}{Principal component analysis} 
+    \item \href{https://en.wikipedia.org/wiki/Monte_Carlo_method}{Monte Carlo method}
+    \item \href{https://en.wikipedia.org/wiki/Markov_chain}{Markov chain}
+  \end{itemize}
+\item 개발 S/W 플랫폼
+  \begin{itemize}
+    \item Mathworks MATLAB
+    \item Javascript (NodeJS)
+    \item C (Libelium SDK)
+    \item Python (Numpy)
+    \item Django
+  \end{itemize}
+\item 참여한 현장: 대공원역 / 개포동역
+\end{itemize}
+
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{철도 재해우려개소 지능형 CCTV 낙석감지 시스템}}{승화기술정책연구소(주)}{2016 -- 2017}{Seoul, Korea}
+
+\begin{itemize}
+\item
+  소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 낙석감지 알람
+\item 실제 수행한 주요 이력
+  \begin{itemize}
+    \item 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
+    \item 애플리케이션 개발: Raspberry Pi \href{https://nodejs.org}{nodeJS} 애플리케이션(OpenCV, nodeJS, Redis, MongoDB 웹서버 및 UI가동)
+  \end{itemize}
+\item 개발 S/W 플랫폼
+  \begin{itemize}
+    \item C++ 기반 OpenCV
+    \item NVidia Jetson TX-1 하드웨어를 통한 딥러닝 (R-CNN, CNN) 툴 사용
+    \item NodeJS, SocketIO 푸시 알림 웹서버 (Redis, MongoDB)
+  \end{itemize}
+\item 현장 테스트베드 가동, 160여개소 적용 준비
+\end{itemize}
+
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주)}{2016 -- 2017}{Seoul, Korea}
+
+\begin{itemize}
+\item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
+\item 실제 수행한 주요 이력: 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
+\item 개발 S/W 플랫폼: C++ 기반 OpenCV, Node.js, Redis, MongoDB
+\item KTX 1편성, ITX-청춘 1편성 현장 적용 완료
+\end{itemize}
+
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{철도 콘크리트 도상 균열 자동 탐지 과제}}{승화기술정책연구소(주)}{2017 -- 2017}{Seoul, Korea}
+
+\begin{itemize}
+\item 소개: 철도 콘크리트 도상 균열 자동 탐지 과제
+\item 실제 수행한 주요 이력
+  \begin{itemize}
+    \item 레이저 라인 스캔카메라를 이용한 고해상도 이미지 취득후 균열 탐지 (0.3x0.22mm)
+    \item Phothmetric normalization과 B-COSFIRE Filter(DoG response)를 사용하여 TCL층의 라인구조식별
+    \item Machine learning(support vector machine)을 이용하여 도상 구조물과 균열을 분류
+    \item 분류된 균열 그리고 도상 구조물을 ground truth로 분리하여 CNN(convolutional neural network) 학습.
+  \end{itemize}
+\item 개발 S/W 플랫폼: Python, Tensor flow, OpenCV
+\item 현장 테스트베드 가동(Trolley 방식), 추후 차년도 선로검측차 제작시 탑재
+\end{itemize}
+
+\divider
+
+\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주)}{2017 -- 2017}{Seoul, Korea}
+
+\begin{itemize}
+\item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
+\item 실제 수행한 주요 이력: 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
+\item 개발 S/W 플랫폼: * C++ 기반 OpenCV, Node.js, Redis, MongoDB
+\item KTX 1편성, ITX-청춘 1편성 현장 적용 완료
+\end{itemize}
+
+
 \end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd
 %% still like to add a sidebar, then use this command on THIS
