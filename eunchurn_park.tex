@@ -44,7 +44,7 @@
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{Carlito}
+  \setmainfont{NanumSquareR}
 \else
   % If using pdflatex:
   \usepackage[utf8]{inputenc}
@@ -118,15 +118,23 @@
 
 \cvevent{Research Engineer \& Algorithm developer}{Korea Maintenance CO., LTD.}{Apr. 2009 -- May 2015}{Seoul, Korea}
 \begin{itemize}
-\item 초고층 건물의 GPS 망보정기법과 외란보정 기법을 이용한 거푸집 연직도 관리: Multirate-Kalman Filter, GNSS-RTK, Ordinary Procrustes Analysis, Fourier linear combiner등의 알고리즘을 개발 및 현장 적용, 건설신기술 인증 국토해양부고시 제2011-313호
-\item 한국철도공사 공항철도 및 KTX 진동가속도 분석 시스템: 열차 주행안정성 평가 알고리즘 개발, slip/slide 및 승차감 분석 프로그램 개발(CWA-FRF, ISO 2631-1, UIC-513, UIC-518OR)
-\item LCD Display 글래스 이송로봇진동 사전감지시스템(Early Warning System) 개발: Prediction management, Block Hankel matrix based signal decomposition, Wavelet analysis, Cepstrum analysis등 개발
-\item 초고층 건물 구조 건전도 모니터링(structural health monitoring) 및 능동형 제진장치 모니터링 시스템 개발: 고감도 가속도 센서 기반 DAQ 개발, 시각동기화기술 개발(IEEE-1588 PTP protocol, Kalman filter), EPGA, Stochastic subspace identification 알고리즘 개발
+\item 초고층 건물의 GPS 망보정기법과 외란보정 기법을 이용한 거푸집 연직도 관리 (MR-Kalman Filter, GNSS-RTK, OPA, FLC, application), 건설신기술 인증 국토해양부고시 제2011-313호
+\item 한국철도공사 공항철도 및 KTX 진동가속도 분석 시스템: 주행안정성 평가 알고리즘, slip/slide, 승차감 분석 알고리즘 (CWA-FRF, ISO 2631-1, UIC-513, UIC-518OR)
+\item LCD Display 글래스 이송로봇 사전감지시스템(EWS) 개발: 로봇설비의 Predictive maintenance, HMB-SD, Wavelet analysis, Cepstrum analysis
+\item 초고층 건물 구조 건전도 모니터링(SHM) 및 A-TMD 모니터링 시스템 개발: 고감도 가속도 센서(144dB) 기반 DAQ 개발, 시각동기화기술(IEEE-1588 PTP, Kalman filter), EPGA, SSI 알고리즘
 \end{itemize}
 
 \divider
+\begin{fullwidth}
+\cvsection{Education}
 
-\clearpage
+\cvevent{Ph.D.}{Dept. Architectural Engineering, Structural dynamics, Dankook University}{Mar. 2007 -- Aug. 2017}{}
+
+\cvevent{M.Sc.}{Dept. Architectural Engineering, Dankook University}{Mar. 2005 -- Feb. 2007}{}
+
+\cvevent{B.Sc.}{Dept. Architectural Engineering, School of Architecture, Dankook University}{Mar. 1999 -- Feb. 2005}{}
+\end{fullwidth}
+
 \begin{fullwidth}
 \cvsection[page2sidebar]{Publications}
 % 
@@ -229,7 +237,7 @@
 \begin{fullwidth}
 \cvsection[page2sidebar]{Projects detail}
 
-\cvevent{\printinfo{\faPlusSquare}{초고층 건물의 \href{http://gnss.ngii.go.kr/info/summary}{GNSS} 망조정기법과 외란보정 기법을 이용한 거푸집 연직도 관리}}{Korea Maintenance CO., LTD.}{Apr. 2009 -- Sep. 2014}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{초고층 건물의 \href{http://gnss.ngii.go.kr/info/summary}{GNSS} 망조정기법과 외란보정 기법을 이용한 거푸집 연직도 관리}}{Korea Maintenance CO., LTD. 개발참여: 100\%}{Apr. 2009 -- Sep. 2014}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개 : 초고층건물 시공에서 \href{http://gnss.ngii.go.kr/info/summary}{GNSS}를 이용하여 연직도를 관리하고자 하는 신기술 인증 프로젝트
@@ -272,7 +280,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{코레일 공항철도 및 KTX 진동가속도 분석 시스템}}{Korea Maintenance CO., LTD.}{Oct. 2011 -- Sep. 2012}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{코레일 공항철도 및 KTX 진동가속도 분석 시스템}}{Korea Maintenance CO., LTD. 개발참여: 95\%}{Oct. 2011 -- Sep. 2012}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개 : 차축-대차-차체의 좌우 2방향 가속도계 설치, 차축의 타코미터 설치, 계측시스템을 구성하여 공항철도의 궤도이상개소검출, 열차의 주행안정성평가, \href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=\&arnumber=264942\&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs_all.jsp\%3Farnumber\%3D264942}{slip/slide} 및 승차감평가 시스템 개발 및 준공
@@ -301,7 +309,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{LCD Display 글래스 이송로봇진동 사전감지시스템 (\href{https://en.wikipedia.org/wiki/Early_warning_system}{Early Warning System})}}{Korea Maintenance CO., LTD.}{2011 -- 2012}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{LCD Display 글래스 이송로봇진동 사전감지시스템 (\href{https://en.wikipedia.org/wiki/Early_warning_system}{Early Warning System})}}{Korea Maintenance CO., LTD. 개발참여: 90\%}{2011 -- 2012}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: Glass를 옮기는 이송로봇에 3축가속도계 1기 설치하여 로봇관절운동의 패턴을 분류하고 초기치에 비해 변화량을 모니터링 해서 각 파트의 이상을 미리 감지. 
@@ -327,7 +335,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{초고층건물 구조건전도 모니터링}\href{https://en.wikipedia.org/wiki/Structural_health_monitoring}{Structural Health Monitoring}\footnote{The process of implementing a damage detection and characterization strategy for engineering structures is referred to as \href{https://en.wikipedia.org/wiki/Structural_health_monitoring}{Structural Health Monitoring (SHM)}}}{Korea Maintenance CO., LTD.}{2011 -- 2012}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{초고층건물 구조건전도 모니터링}\href{https://en.wikipedia.org/wiki/Structural_health_monitoring}{Structural Health Monitoring}\footnote{The process of implementing a damage detection and characterization strategy for engineering structures is referred to as \href{https://en.wikipedia.org/wiki/Structural_health_monitoring}{Structural Health Monitoring (SHM)}}}{Korea Maintenance CO., LTD. 개발참여: 97\%}{2011 -- 2012}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 초고층건물의 시공중/사용중 계측 모니터링 : 주로 FBG, 지진가속도계, 가속도계, GPS, 풍향풍속계 사용.
@@ -361,7 +369,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{능동형 제진장치 (\href{http://www.sciencedirect.com/science/article/pii/S0141029697000722}{Active \& Hybrid Mass Damper, A-HMD})개발 및 웹플랫폼 개발}}{Korea Maintenance \& APROS}{2014 -- 2019}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{능동형 제진장치 (\href{http://www.sciencedirect.com/science/article/pii/S0141029697000722}{Active \& Hybrid Mass Damper, A-HMD})개발 및 웹플랫폼 개발}}{Korea Maintenance \& APROS 개발참여: 100\%}{2014 -- 2019}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 건물의 사용중 진동 저감을 위한 능동형 제진장치 설치 및 모니터링 플랫폼 개발 프로젝트
@@ -403,7 +411,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{도로 안개 소산 시스템 프로젝트}}{Korea Maintenance}{2014 -- 2019}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{도로 안개 소산 시스템 프로젝트}}{Korea Maintenance 개발참여: 100\%}{2014 -- 2019}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 온풍, 음이온 생성기, 응결핵등을 방사하여 도로상에 안개를 신속히 제거하는 시스템
@@ -420,7 +428,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{지하철 역사 초기 재난 대응 M2M 대피경로 안내 시스템}}{승화기술정책연구소(주)}{2015 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{지하철 역사 초기 재난 대응 M2M 대피경로 안내 시스템}}{승화기술정책연구소(주) 개발참여: 80\%}{2015 -- 2017}{Seoul, Korea}
 
 \begin{itemize}
 \item
@@ -456,7 +464,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{철도 재해우려개소 지능형 CCTV 낙석감지 시스템}}{승화기술정책연구소(주)}{2016 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{철도 재해우려개소 지능형 CCTV 낙석감지 시스템}}{승화기술정책연구소(주) 개발참여: 95\%}{2016 -- 2017}{Seoul, Korea}
 
 \begin{itemize}
 \item
@@ -477,7 +485,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주)}{2016 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주) 개발참여: 100\%}{2016 -- 2017}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
@@ -488,7 +496,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{철도 콘크리트 도상 균열 자동 탐지 과제}}{승화기술정책연구소(주)}{2017 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{철도 콘크리트 도상 균열 자동 탐지 과제}}{승화기술정책연구소(주) 개발참여: 100\%}{2017 -- 2017}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 철도 콘크리트 도상 균열 자동 탐지 과제
@@ -505,7 +513,7 @@
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주)}{2017 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주) 개발참여: 100\%}{2017 -- 2017}{Seoul, Korea}
 
 \begin{itemize}
 \item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
