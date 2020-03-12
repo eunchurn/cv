@@ -1,4 +1,5 @@
-%!TEX encoding = UTF-8 Unicode
+% !TeX root = ./eunchurn_park.tex
+% !TEX encoding = UTF-8 Unicode
 %%%%%%%%%%%%%%%%%
 % This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
 % LianTze Lim (liantze@gmail.com), based on the
@@ -31,6 +32,11 @@
     urlcolor=cyan,
 }
 \usepackage{dblfnote}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\captionsetup{labelformat=empty}
+
 \DFNalwaysdouble% no attempt to fit footnotes into a single column
 
 %% AltaCV uses the fontawesome and academicon fonts
@@ -169,31 +175,18 @@
 \nocite{*}
 \href{http://www.dankook.ac.kr/}{\textbf{Dankook University}},
 \begin{itemize}
-\item Ph.D.,
-        \href{http://cms.dankook.ac.kr/web/archi}
-             {Architectural Engineering, School of Architecture},
-             Aug. 2017
-        \begin{itemize}
-        \item Topic: \emph{Hybrid Testing Method and Excitation System Design for Seismic and Wind-resistant Performance Evaluation of Building Structures with Nonlinear Dampers}
-        \item Advisors:
-              \href{http://cms.dankook.ac.kr/web/archi/-16?p_p_id=DeptInfo_WAR_empInfoportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_DeptInfo_WAR_empInfoportlet_empId=2zEyEnhbhLlys2HRljBFWg%3D%3D&_DeptInfo_WAR_empInfoportlet_action=view_message}
-                   {Kyung-Won Min, Ph.D}
-        \end{itemize}
+\item Ph.D., \href{http://cms.dankook.ac.kr/web/archi} {Architectural Engineering, School of Architecture}, Aug. 2017
+\begin{itemize}
+  \item Topic: \emph{Hybrid Testing Method and Excitation System Design for Seismic and Wind-resistant Performance Evaluation of Building Structures with Nonlinear Dampers}
+  \item Advisors: \href{http://cms.dankook.ac.kr/web/archi/-16?p_p_id=DeptInfo_WAR_empInfoportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_DeptInfo_WAR_empInfoportlet_empId=2zEyEnhbhLlys2HRljBFWg%3D%3D&_DeptInfo_WAR_empInfoportlet_action=view_message}{Kyung-Won Min, Ph.D}
+\end{itemize}
 
-\item M.S.,
-        \href{http://cms.dankook.ac.kr/web/archi}
-             {Architectural Engineering, School of Architecture},
-             Feb. 2007
-        \begin{itemize}
-        \item Topic: \emph{Design of Excitation Systems for Simulating Dynamic Loads and Real-Time Hybrid Test Method of Building Structures}
-        \item Advisor:
-              \href{http://cms.dankook.ac.kr/web/archi/-16?p_p_id=DeptInfo_WAR_empInfoportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_DeptInfo_WAR_empInfoportlet_empId=2zEyEnhbhLlys2HRljBFWg%3D%3D&_DeptInfo_WAR_empInfoportlet_action=view_message}
-                   {Kyung-Won Min, Ph.D}
-        \end{itemize}
-\item B.S.,
-        \href{http://cms.dankook.ac.kr/web/archi}
-             {Architectural Engineering, School of Architecture},
-             Feb. 2005
+\item M.S., \href{http://cms.dankook.ac.kr/web/archi} {Architectural Engineering, School of Architecture}, Feb. 2007
+\begin{itemize}
+  \item Topic: \emph{Design of Excitation Systems for Simulating Dynamic Loads and Real-Time Hybrid Test Method of Building Structures}
+  \item Advisor: \href{http://cms.dankook.ac.kr/web/archi/-16?p_p_id=DeptInfo_WAR_empInfoportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_DeptInfo_WAR_empInfoportlet_empId=2zEyEnhbhLlys2HRljBFWg%3D%3D&_DeptInfo_WAR_empInfoportlet_action=view_message} {Kyung-Won Min, Ph.D}
+\end{itemize}
+\item B.S., \href{http://cms.dankook.ac.kr/web/archi}{Architectural Engineering, School of Architecture}, Feb. 2005
 \end{itemize}
 
 \cvsection[page2sidebar]{Research projects}
@@ -242,7 +235,7 @@
 \begin{itemize}
 \item 소개 : 초고층건물 시공에서 \href{http://gnss.ngii.go.kr/info/summary}{GNSS}를 이용하여 연직도를 관리하고자 하는 신기술 인증 프로젝트
 \item 프로젝트 목표: 거푸집 연직도 시공 누적오차 10mm이내 / 시공 층별오차 4mm 이내의 관리기준을 만족해야 함.
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용
 \begin{itemize}
   \item \href{https://en.wikipedia.org/wiki/Real_Time_Kinematic}{RTK}-\href{https://en.wikipedia.org/wiki/Virtual_Reference_Station}{VRS}\footnote{Virtual Reference Station (VRS) networks use real-time kinematic (RTK) solutions to provide high-accuracy, RTK Global Navigation Satellite Systems.} 시공
   \item 기준점 네트워크 망조정 : 기준국을 타설하여 3점, 4점 \href{https://en.wikipedia.org/wiki/Procrustes_analysis}{Procrustes}기법을 사용하여 망조정 : OPA\footnote{\href{https://en.wikipedia.org/wiki/Procrustes_analysis}{Ordinary Procrustes Analysis (OPA)}} 방식으로 1초단위의 scale, rotation값을 생성하여 값보정 
@@ -263,6 +256,23 @@
 \begin{itemize}
   \item \href{https://en.wikipedia.org/wiki/National_Instruments}{National Instruments} \href{https://en.wikipedia.org/wiki/LabVIEW}{LabVIEW}
   \item \href{https://en.wikipedia.org/wiki/MathWorks}{Mathworks} \href{https://en.wikipedia.org/wiki/MATLAB}{MATLAB}
+  \begin{figure}[ht]
+    \begin{fullwidth}
+    \centering
+    \parbox{0.5\textwidth}{
+      \includegraphics[width=0.5\textwidth] {images/gps_01.png}
+      \caption*{거푸집 연직도관리 SW}
+    }\qquad
+    \parbox{0.5\textwidth}{
+      \includegraphics[width=0.5\textwidth] {images/gps_02.png}
+      \caption*{GPS-RTK Streaming}
+    }\qquad
+    \parbox{0.5\textwidth}{
+      \includegraphics[width=0.5\textwidth] {images/gps_03.png}
+      \caption*{Accelerometer compensation}
+    }
+    \end{fullwidth}
+  \end{figure}
 \end{itemize}
 \item 참여한 현장
 \begin{itemize}
@@ -282,9 +292,27 @@
 
 \cvevent{\printinfo{\faPlusSquare}{코레일 공항철도 및 KTX 진동가속도 분석 시스템}}{Korea Maintenance CO., LTD. 개발참여: 95\%}{Oct. 2011 -- Sep. 2012}{Seoul, Korea}
 
+\begin{figure}[ht]
+  \begin{fullwidth}
+  \centering
+  \parbox{0.5\textwidth}{
+    \includegraphics[width=0.5\textwidth] {images/arex_01.png}
+    \caption*{궤도 이상개소 분석}
+  }\qquad
+  \parbox{0.5\textwidth}{
+    \includegraphics[width=0.5\textwidth] {images/arex_02.png}
+    \caption*{주행 안정성 분석}
+  }\qquad
+  \parbox{0.5\textwidth}{
+    \includegraphics[width=0.5\textwidth] {images/arex_03.png}
+    \caption*{열차 승차감 분석}
+  }
+  \end{fullwidth}
+\end{figure}
+
 \begin{itemize}
 \item 소개 : 차축-대차-차체의 좌우 2방향 가속도계 설치, 차축의 타코미터 설치, 계측시스템을 구성하여 공항철도의 궤도이상개소검출, 열차의 주행안정성평가, \href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=\&arnumber=264942\&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs_all.jsp\%3Farnumber\%3D264942}{slip/slide} 및 승차감평가 시스템 개발 및 준공
-\item 실제 수행한 주요 이력: 
+\item 참여 개발 내용: 
 \begin{itemize}
   \item 공항철도 이상개소 분석시스템 : 10m KP간격 CWA-FRF\footnote{Coherence Weighted Averaged Frequency Response Function (CWA-FRF) refer to ``\href{http://institute.lanl.gov/ei/shm/pubs/modal_stat_jvc_jul00.pdf}{Estimation Of Statistical Distributions For Modal Parameters Identified From Averaged Frequency Response Function Data}'', Journal of Vibration and Control, July 2000} 함수로 전달함수 예측, 측정된 차축-대차-차체의 \href{https://en.wikipedia.org/wiki/Frequency_response}{주파수응답함수(Frequency response function, FRF)}를 통해 중심주파수-대역폭-가중치함수를 규정, \href{http://www.scholarpedia.org/article/Boundary_value_problem}{경계비선형} 최적화 알고리즘 적용으로 이상개소 분석시스템 구축 
   \item 공항철도 차량 주행 안정성 분석 시스템 : 병진, 롤링진동 분석 후 속도/도상 별 기준값 적용하여 이상진동의 위치 검출
@@ -297,6 +325,12 @@
   \item Coherence-weighted Averaging Frequency Response Function Estimation
   \item Fast Algorithm for Nonlinearly Constrained Optimization Calculations
   \item \href{https://en.wikipedia.org/wiki/Finite_impulse_response}{FIR Filter} design
+  \begin{figure}[ht]
+    \begin{fullwidth}
+    \centering
+      \includegraphics[width=1\textwidth] {images/arex_04.png}
+  \end{fullwidth}
+  \end{figure}
 \end{itemize}
 \item 개발 S/W 플랫폼: Mathworks MATLAB / GUI
 \item 참여한 현장:
@@ -314,7 +348,7 @@
 \begin{itemize}
 \item 소개: Glass를 옮기는 이송로봇에 3축가속도계 1기 설치하여 로봇관절운동의 패턴을 분류하고 초기치에 비해 변화량을 모니터링 해서 각 파트의 이상을 미리 감지. 
 \item 프로젝트 목표: 제조사측은 사전진단(\href{https://en.wikipedia.org/wiki/Early_warning_system}{Eearly Warning System, EWS})과 부품별 파트진단(\href{https://en.wikipedia.org/wiki/Predictive_maintenance}{Prediction Management Program, PMP})을 수행하기 원함.
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용
   \begin{itemize}
     \item 신호분리기법 적용: \href{https://en.wikipedia.org/wiki/Hankel_matrix}{Hankel Matrix}와 \href{https://en.wikipedia.org/wiki/Singular_value_decomposition}{Singular value decomposition, SVD}기법을 활용해서 signal decomposition 적용 그리고 \href{https://en.wikipedia.org/wiki/Wavelet}{wavelet} 기법을 적용해서 신호분리도 적용 \item 패턴분류: rms-triggering기법으로 구간을 나눈후 \href{https://en.wikipedia.org/wiki/Independent_component_analysis}{ICA(independent component analysis)}적용
     \item Spectrogram과 Cepstrum 분석으로 사전진단 가능성 판단
@@ -329,6 +363,18 @@
     \item \href{https://en.wikipedia.org/wiki/Cepstrum}{Cepstrum analysis}\footnote{A cepstrum is the result of taking the Inverse Fourier transform (IFT) of the logarithm of the estimated spectrum of a signal.}
     \item \href{https://en.wikipedia.org/wiki/Spectrogram}{Spectrogram}
   \end{itemize}
+  \begin{figure}[ht]
+    \begin{fullwidth}
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth]{images/lgdisplay.jpg}
+        \caption*{Time series}
+      }\qquad
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth]{images/lgdisplay_02.jpg}
+        \caption*{Frequency domain}
+      }
+    \end{fullwidth}
+  \end{figure}
 \item 개발 S/W 플랫폼: Mathworks MATLAB / GUI
 \item 참여한 현장: LG Display 파주공장
 \end{itemize}
@@ -339,14 +385,42 @@
 
 \begin{itemize}
 \item 소개: 초고층건물의 시공중/사용중 계측 모니터링 : 주로 FBG, 지진가속도계, 가속도계, GPS, 풍향풍속계 사용.
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용
   \begin{itemize}
     \item \href{https://en.wikipedia.org/wiki/Signal-to-noise_ratio}{SNR} 125dB\textasciitilde{}130dB 이상의 센서에 적합한 \href{https://en.wikipedia.org/wiki/Data_acquisition}{DAQ} 보드 개발: 저주파와 신호대잡음비 성능이 우수한 가속도계 센서에 적합한 \href{https://en.wikipedia.org/wiki/Data_acquisition}{DAQ}는 사실상 고가임. 따라서 설치가 용이한 유선 네트워크방식의 \href{https://en.wikipedia.org/wiki/Data_acquisition}{DAQ}보드 개발이 필요하여 개발참여.
     \item \href{http://kr.mathworks.com/help/daq/examples/getting-started-with-session-based-interface-using-ni-devices.html}{Session-based interface} 프로그래밍으로 데이터수집을 다른 thread로 작동시킴과 동시에 분석과 해석이 동시에 이루어짐 (실시간 모드벡터 추출/FFT또는 파워스펙트럼 그래프도시)
+    \begin{figure}[ht]
+      \begin{fullwidth}
+        \parbox{0.5\textwidth}{
+          \includegraphics[width=0.5\textwidth] {images/SW1.JPG}
+          \caption*{Time series}
+        }\qquad
+        \parbox{0.5\textwidth}{
+          \includegraphics[width=0.5\textwidth] {images/SW2.JPG}
+          \caption*{Frequency domain}
+        }\qquad
+        \parbox{0.5\textwidth}{
+          \includegraphics[width=0.5\textwidth] {images/doosan_01.jpg}
+          \caption*{Modal analysis (FDD/SSI)}
+        }
+      \end{fullwidth}
+    \end{figure}
     \item 시각동기화 프로토콜 적용 \href{https://ko.wikipedia.org/wiki/IEEE_1588}{IEEE-1588 Precision Time Protocol}\footnote{Precision Time Protocol(PTP)은 네트워크 간 정확한 동기화를 가능케하는 \href{https://ko.wikipedia.org/wiki/IEEE_1588}{IEEE 1588} 표준 시간 전송 프로토콜이다. 하드웨어에서 생성하는 타임스탬프를 사용할 때 나노초 단위의 정확도까지 보장해 준다.} : GPS 클럭을 모든 장비에 연결하려면 많은 인력과 비용이 소모됨. 따라서 유선네트워크 방식에서의 동기화 프로토콜을 적용 (펌웨어단계에서 클럭동기화에 성공)
     \item 지진경보 시스템 : 여러동의 건물의 경우 각동 지하에 지진가속도계를 설치하여 지진경보를 발령. 이때 각동의 EPGA\footnote{In seismic engineering, the effective peak acceleration (EPA, the maximum ground acceleration to which a building responds) is often used, which tends to be ⅔ -- ¾ the PGA, The term `\href{http://www.teachmefinance.com/Scientific_Terms/Effective\%20peak\%20ground\%20acceleration.html\#ixzz3iNuQcQLs}{Effective peak ground acceleration}' as it applies to the area of reclamation can be defined as `That acceleration which is most closely related to structural response and to damage potential of an earthquake'.}값으로 rms-triggering 적용 각 3개의 동에서 동시에 임계값 이상이 발생하였을 때 지진으로 판정.
     \item 모드정보 추출 : SSI(Stochastic subspace identification)\footnote{The data driven \href{http://www.svibs.com/solutions/literature/2006_2.pdf}{\textbf{Stochastic Subspace Identification}} techniques is considered to be the most powerful class of the known identification techniques for natural input modal analysis in the time domain. Refer to B. Peeters and G. D. Rodeck (1999), ``\href{ftp://193.136.28.78/pub/Personal/Dec/filipema/public/FCT_WindOMA/ref_8.pdf}{Reference-based Stochastic Subspace Identification for Output-only Modal Analysis}'', \emph{Mechanical Systems and Signal Processing} (1999) 13(6), 855\}878} 기법과 \href{https://en.wikipedia.org/wiki/Frequency_domain_decomposition}{FDD(Frequency domain decomposition)}\footnote{The \href{https://en.wikipedia.org/wiki/Frequency_domain_decomposition}{frequency domain decomposition (FDD)} is an output-only system identification technique popular in civil engineering, in particular in structural health monitoring. As an output-only algorithm, it is useful when the input data is unknown. FDD is a modal analysis technique which generates a system realization using the frequency response given (multi-)output data} 기법을 적용 
   \end{itemize}
+  \begin{figure}[ht]
+    \begin{fullwidth}
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth] {images/M3.PNG}
+        \caption*{Main}
+      }\qquad
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth] {images/M9.PNG}
+        \caption*{Details}
+      }
+    \end{fullwidth}
+  \end{figure}
 \item 적용된 기술:
   \begin{itemize}
  \item \href{http://kr.mathworks.com/products/daq/}{Data acquisition toolbox (MATLAB)}
@@ -373,7 +447,7 @@
 
 \begin{itemize}
 \item 소개: 건물의 사용중 진동 저감을 위한 능동형 제진장치 설치 및 모니터링 플랫폼 개발 프로젝트
-\item 실제 수행한 주요 이력:
+\item 참여 개발 내용:
   \begin{itemize}
     \item \href{http://www.quanser.com/products/active_mass_damper}{Quansar 소형 AMD 제어}, \href{https://en.wikipedia.org/wiki/Linear-quadratic_regulator}{LQR}/\href{https://en.wikipedia.org/wiki/Linear-quadratic-Gaussian_control}{LQG} 알고리즘 탑재.
     \item 실제 현장에서 계측데이터 품질 확보를 위한 signal conditioning
@@ -382,6 +456,40 @@
     \item MQTT Broker를 통한 데이터 표출 API 개발
     \item 모니터링 웹애플리케이션 개발
   \end{itemize}
+  \begin{figure}[!ht]
+    \begin{fullwidth}
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - landing.png}
+      \caption*{Landing page}
+      }\qquad
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - amd1}
+      \caption*{RT AMD mon \#1}
+      }\qquad
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - amd2}
+      \caption*{RT AMD mon \#2}
+      }
+      \parbox{0.5\textwidth}{
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - time2}
+        \caption*{RT Acc. mon. Time domain}
+        }\qquad
+        \parbox{0.5\textwidth}{
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - fft2}
+        \caption*{RT Acc. mon. Frequency domain}
+        }\qquad
+        \parbox{0.5\textwidth}{
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/TM21 Vibration Controller Monitroing - 220.149.227.106}
+        \caption*{RT. Wind mon.}
+        }
+    \end{fullwidth}
+  \end{figure}
 \item
  적용된 기술:
    \begin{itemize}
@@ -392,7 +500,8 @@
     \item Signal conditioning
     \item \href{https://en.wikipedia.org/wiki/Programmable_logic_controller}{PLC(Programmable Logic Controller)}
     \item Javascript(CommonJS)
-    \item MQTT
+    \item Socket.io
+    \item MQTT (CBOR)
     \item MongoDB
     \item GraphQL
     \item ReactJS
@@ -402,9 +511,6 @@
     \item Mathworks MATLAB / GUI / Simulink
     \item National Instruments LabVIEW
     \item nodeJS
-    \item mongoDB
-    \item ReactJS
-    \item GraphQL
   \end{itemize}
 \item 참여한 현장: 강변 테크노마트 AMD 시공 프로젝트
 \end{itemize}
@@ -415,7 +521,7 @@
 
 \begin{itemize}
 \item 소개: 온풍, 음이온 생성기, 응결핵등을 방사하여 도로상에 안개를 신속히 제거하는 시스템
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용
   \begin{itemize}
     \item CCTV 영상이미지를 이용한 안개시정거리 계산: \href{https://en.wikipedia.org/wiki/Feature_detection_(computer_vision)}{Feature detection}
     \item 오브젝트 트래킹 문제: \href{https://en.wikipedia.org/wiki/Partial_least_squares_regression}{Partial least square analysis}를 통해 타깃의 위치 판탄 (2stage filtering)
@@ -424,6 +530,19 @@
     \item \href{https://siddhantahuja.wordpress.com/tag/sum-of-squared-differences/}{Sum of squared difference} \/ \href{https://en.wikipedia.org/wiki/Cross-correlation\#Normalized_cross-correlation}{Normalized cross-correlation} 으로 최종 매핑 스코어 판정
     \item CCTV 이미지를 통해 안개소산장치를 ON/OFF 제어 : 평균화 방식의 \href{https://en.wikipedia.org/wiki/PID_controller}{PID 제어기}로 설계
   \end{itemize}
+  \begin{figure}[!ht]
+    \begin{fullwidth}
+    \centering
+    \parbox{1.2\textwidth}{
+      \includegraphics[width=1.2\textwidth]{images/fog_02_01.png}
+      \caption*{Fog cannon controller}
+    }\qquad
+    \parbox{0.3\textwidth}{
+      \includegraphics[width=0.3\textwidth]{images/fog_03.png}
+      \caption*{시정거리 계산 / PID 제어}
+    }
+    \end{fullwidth}
+  \end{figure}
 \end{itemize}
 
 \divider
@@ -434,15 +553,52 @@
 \item
   소개: 가스센서 노드로부터 데이터를 받아 화재 및 재난을 초기 인식하여 승객들에게 대피경로를 안내하는 시스템
 \item
-  실제 수행한 주요 이력:
+  참여 개발 내용:
   \begin{itemize}
     \item Libelium Waspmote기반 가스센서 펌웨어 개발
     \item 가스센서 Calibration : MATLAB을 이용하여 기준값 측정 후 곡선적합
-    \item 게이트웨이 개발: Raspberry Pi \href{https://nodejs.org}{nodeJS} 애플리케이션(serial parsing, mysql, 웹서버 및 UI가동)
+    \item 게이트웨이 개발: Raspberry Pi \href{https://nodejs.org}{nodeJS} 애플리케이션(serial parsing, Redis, MongoDB, 웹서버 및 클라이언트 개발)
+  
+    \begin{figure}[!ht]
+      \begin{fullwidth}
+      \centering
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth]{images/m2m_01.png}
+        \caption*{실시간 센서 모니터링}
+      }\qquad
+      \parbox{0.8\textwidth}{
+        \includegraphics[width=0.8\textwidth]{images/m2m_02.png}
+        \caption*{센서 캘리브레이션, 데이터 조회}
+      }
+      \end{fullwidth}
+    \end{figure}
     \item 센서노드 API 제작(Plug\&Sense): sleep time 스케쥴링
     \item 화재 감지 및 화재 발생 위치 분석: 주요요소분석(principal component analysis, 각 센서데이터의 확률밀도함수와 이벤트간 주요요소분석), 확률변수시물레이션(Monte-Carlo 시물레이션)
     \item Markov-chain 룰을 통해 상태예측 알고리즘 개발
+    \item 대피경로 안내 시스템 개발(역무원용/승객 알림용)
+    \begin{figure}[ht!]
+      \begin{fullwidth}
+      \centering
+      \includegraphics[width=1.2\textwidth]{images/m2m_03.png}
+      \caption*{대피경로 안내 시나리오 설정}
+      \end{fullwidth}
+    \end{figure}
+    \begin{figure}[ht!]
+      \begin{fullwidth}
+        \centering
+        \includegraphics[width=1.2\textwidth]{images/m2m_04.png}
+        \caption*{승객용 재난 발생 위치 알림}
+      \end{fullwidth}
+    \end{figure}
+    \begin{figure}[ht!]
+      \begin{fullwidth}
+        \centering
+        \includegraphics[width=1.2\textwidth]{images/m2m_05.png}
+        \caption*{센서 Matrix Rule set 지정}
+      \end{fullwidth}
+    \end{figure}
   \end{itemize}
+
 \item 적용된 기술:
   \begin{itemize} 
     \item \href{https://en.wikipedia.org/wiki/Machine_to_machine}{M2M}
@@ -469,11 +625,31 @@
 \begin{itemize}
 \item
   소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 낙석감지 알람
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용
   \begin{itemize}
     \item 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
     \item 애플리케이션 개발: Raspberry Pi \href{https://nodejs.org}{nodeJS} 애플리케이션(OpenCV, nodeJS, Redis, MongoDB 웹서버 및 UI가동)
   \end{itemize}
+  \begin{figure}[!ht]
+    \begin{fullwidth}
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/korail_aod_01.jpg}
+      \caption*{OpenCV 애플리케이션}
+      }\qquad
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/korail_aod_02.jpg}
+      \caption*{이벤트 발생 기록}
+      }\qquad
+      \parbox{0.5\textwidth}{
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/korail_aod_03_01.png}
+      \caption*{이벤트 뷰 > SMS 메시지 전송}
+      }
+    \end{fullwidth}
+  \end{figure}
+
 \item 개발 S/W 플랫폼
   \begin{itemize}
     \item C++ 기반 OpenCV
@@ -489,10 +665,30 @@
 
 \begin{itemize}
 \item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
-\item 실제 수행한 주요 이력: 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
+\item 참여 개발 내용: 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
 \item 개발 S/W 플랫폼: C++ 기반 OpenCV, Node.js, Redis, MongoDB
 \item KTX 1편성, ITX-청춘 1편성 현장 적용 완료
 \end{itemize}
+
+\begin{figure}[!ht]
+  \begin{fullwidth}
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/korail_seat_01_01.png}
+    \caption*{무임 승차자 검출}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/korail_seat_01_02.png}
+    \caption*{MTIT 발권 데이터 요청/응답}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/korail_seat_02.jpg}
+    \caption*{Raspberry Pi 탑재용 테스트 프로그램}
+    }
+  \end{fullwidth}
+\end{figure}
 
 \divider
 
@@ -500,28 +696,91 @@
 
 \begin{itemize}
 \item 소개: 철도 콘크리트 도상 균열 자동 탐지 과제
-\item 실제 수행한 주요 이력
+\item 참여 개발 내용: 연구책임자
   \begin{itemize}
     \item 레이저 라인 스캔카메라를 이용한 고해상도 이미지 취득후 균열 탐지 (0.3x0.22mm)
     \item Phothmetric normalization과 B-COSFIRE Filter(DoG response)를 사용하여 TCL층의 라인구조식별
     \item Machine learning(support vector machine)을 이용하여 도상 구조물과 균열을 분류
     \item 분류된 균열 그리고 도상 구조물을 ground truth로 분리하여 CNN(convolutional neural network) 학습.
   \end{itemize}
-\item 개발 S/W 플랫폼: Python, Tensor flow, OpenCV
-\item 현장 테스트베드 가동(Trolley 방식), 추후 차년도 선로검측차 제작시 탑재
+\item 개발 S/W 플랫폼: MATLAB, Python, Tensor flow(CNN), OpenCV
+\item 현장 테스트베드 가동(Trolley 방식), 선로검측차 탑재
+\item \href{https://eunchurn.com/engineering/2017/12/30/concrete-cracks-detection-using-b-cosfire-filter.html}{링크 참조}
 \end{itemize}
+
+\begin{figure}[ht]
+  \begin{fullwidth}
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/zoomed_dog.png}
+    \caption*{균열과 구조물 분리}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/zoomed.png}
+    \caption*{균열 ground truth 지정}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/crack06.png}
+    \caption*{0.2mm 미세균열 검출}
+    }
+  \end{fullwidth}
+\end{figure}
 
 \divider
 
-\cvevent{\printinfo{\faPlusSquare}{KTX 승객 검표지원 시스템 지능형 CCTV \& MTIT 연동}}{승화기술정책연구소(주) 개발참여: 100\%}{2017 -- 2017}{Seoul, Korea}
+\cvevent{\printinfo{\faPlusSquare}{스마트팩토리 IIoT PdM 플랫폼 개발}}{(주)아프로스 개발참여: 100\%}{2018.03 -- 2019}{Seoul, Korea}
 
 \begin{itemize}
-\item 소개: 컴퓨터 비젼(OpenCV) 및 이미지 프로세싱을 이용한 승객 착석유무 판단
-\item 실제 수행한 주요 이력: 현장 CCTV를 통해 이미지 취득 후 컴퓨터 비젼 프로세싱
-\item 개발 S/W 플랫폼: * C++ 기반 OpenCV, Node.js, Redis, MongoDB
-\item KTX 1편성, ITX-청춘 1편성 현장 적용 완료
+\item 소개: 스마트팩토리 IIoT PdM 솔루션 개발
+\item 참여 개발 내용: Edge Device(DAQ/Analysis) 애플리케이션 개발, 웹플랫폼 개발
+\item 개발 S/W 플랫폼: *nix, NodeJS N-API, C++, golang, Python, Redis, MongoDB, GraphQL, ReactJS
+\item SK하이닉스, SK텔레콤, KETI, 남강정밀등
+\item 참여 개발 내용
+  \begin{itemize}
+    \item 데이터 분석: Diagnosis(HMB-SD 기법 적용, Deep analyzed features), Prognosis(유사성기반 RUL 추정기법)
+    \item Anomaly detection, Disgnosis, Prognosis, Transient event 분류 데이터 누적
+    \item MQTT 브로커, Kafka 분산 메시지 큐, DB구축, GraphQL API 구축
+    \item 디바이스 관리 클라이언트, 플랫폼 클라이언트 개발 (ReactJS)
+  \end{itemize}
+\item 개발 S/W 플랫폼: Python, Scipy, NodeJS, C++, golang, GraphQL, ReactJS, ElectronJS
+\item 현장 테스트베드 가동: 80여개소 디플로이 및 유지관리
 \end{itemize}
-
+\begin{figure}[!ht]
+  \begin{fullwidth}
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/new_dashboard_02.png}
+    \caption*{Anomaly detection}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/new_dashboard_03.png}
+    \caption*{Fault detection}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/new_dashboard_05.png}
+    \caption*{데이터 조회}
+    }
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/new_dashboard_06.png}
+    \caption*{Trending / Anomaly map}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/new_dashboard_04.png}
+    \caption*{설비 상태 모니터링}
+    }\qquad
+    \parbox{0.5\textwidth}{
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/mcdl-01.png}
+    \caption*{Data logger tool (ElectronJS)}
+    }
+  \end{fullwidth}
+\end{figure}
 
 \end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd
