@@ -1,6 +1,11 @@
 {
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": ,
   "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex only",
+      "tools": ["xelatex"]
+    },
     {
       "name": "pdflatex only",
       "tools": ["pdflatex"]
@@ -8,6 +13,10 @@
     {
       "name": "pdflatex -> biber -> pdflatex -> pdflatex",
       "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "xelatex -> biber -> xelatex -> xelatex",
+      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
     }
   ],
   "latex-workshop.latex.tools": [

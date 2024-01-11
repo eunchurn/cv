@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "command": "pdflatex",
+  "command": "xelatex",
   "args": [
     "-interaction=nonstopmode",
     "-file-line-error",
@@ -21,9 +21,9 @@
   },
   "tasks": [
     {
-      "label": "pdflatex",
+      "label": "xelatex",
       "type": "shell",
-      "command": "pdflatex",
+      "command": "xelatex",
       "args": [
         "-interaction=nonstopmode",
         "-file-line-error",

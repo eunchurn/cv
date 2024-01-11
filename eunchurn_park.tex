@@ -1,4 +1,5 @@
-% !TeX root = ./eunchurn_park.tex
+% !TEX TS-program = lualatex
+% !TEX root = ./eunchurn_park.tex
 % !TEX encoding = UTF-8 Unicode
 %%%%%%%%%%%%%%%%%
 % This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
@@ -35,6 +36,9 @@
 \usepackage{graphicx}
 \usepackage{caption}
 
+\usepackage{fontspec}
+\usepackage{fontawesome}
+
 \captionsetup{labelformat=empty}
 
 \DFNalwaysdouble% no attempt to fit footnotes into a single column
@@ -50,7 +54,8 @@
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{NanumSquareR}
+  % \setmainfont{NanumSquareR}
+  \setmainfont{Pretendard}
 \else
   % If using pdflatex:
   \usepackage[utf8]{inputenc}
@@ -58,16 +63,18 @@
   \usepackage[default]{lato}
 \fi
 \usepackage[cjk]{kotex}
+\usepackage[utf8]{inputenc}
 \usepackage[backend=biber]{biblatex}
 %% sample.bib contains your publications
 \addbibresource{eunchurn.bib}
 % \usepackage{dhucs-nanumfont}
 % Change the colours if you want to
 \definecolor{VividPurple}{HTML}{2c3e50}
-\definecolor{SlateGrey}{HTML}{34495e}
-\definecolor{LightGrey}{HTML}{7f8c8d}
-\colorlet{heading}{VividPurple}
-\colorlet{accent}{VividPurple}
+\definecolor{SlateGrey}{HTML}{35568A}
+\definecolor{LightGrey}{HTML}{3B4041}
+\definecolor{Pantone}{HTML}{BB2649}
+\colorlet{heading}{Pantone}
+\colorlet{accent}{Pantone}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
@@ -78,7 +85,7 @@
 
 \begin{document}
 \name{Eunchurn Park}
-\tagline{Full-stack developer, Architectural engineer, Data scientist}
+\tagline{Full-stack developer, Architectural engineer}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 \photo{2.5cm}{profile}
 \personalinfo{%
