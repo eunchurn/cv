@@ -76,3 +76,10 @@
 - Can now be compiled with pdflatex, XeLaTeX and LuaLaTeX!
 - However if you're using `academicons`, you _must_ use either XeLaTeX or LuaLaTeX. If the doc then compiles but the icons don't show up in the output PDF, try compiling with LuaLaTeX instead.
 - The samples here use the [Lato](http://www.latofonts.com/lato-free-fonts/) font.
+
+## Prettify (LaTeX Workshop)
+
+```
+cpan YAML::Tiny
+cpan File::HomeDir
+```
