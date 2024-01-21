@@ -3,20 +3,40 @@
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.recipes": [
     {
-      "name": "xelatex only",
-      "tools": ["xelatex"]
+      "name": "luatex only",
+      "tools": [
+        "lualatex"
+      ]
     },
     {
       "name": "pdflatex only",
-      "tools": ["pdflatex"]
+      "tools": [
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "xelatex only",
+      "tools": [
+        "xelatex"
+      ]
     },
     {
       "name": "pdflatex -> biber -> pdflatex -> pdflatex",
-      "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+      "tools": [
+        "pdflatex",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+      ]
     },
     {
       "name": "xelatex -> biber -> xelatex -> xelatex",
-      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+      "tools": [
+        "xelatex",
+        "biber",
+        "xelatex",
+        "xelatex"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -55,9 +75,24 @@
       "env": {}
     },
     {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-shell-escape", //I can't remember why I needed this in the past 
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
       "name": "biber",
       "command": "biber",
-      "args": ["%DOCFILE%"],
+      "args": [
+        "%DOCFILE%"
+      ],
       "env": {}
     }
   ]

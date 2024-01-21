@@ -83,3 +83,29 @@
 cpan YAML::Tiny
 cpan File::HomeDir
 ```
+
+## Reduce file
+
+```
+-dPDFSETTINGS=/screen   (screen-view-only quality, 72 dpi images)
+-dPDFSETTINGS=/ebook    (low quality, 150 dpi images)
+-dPDFSETTINGS=/printer  (high quality, 300 dpi images)
+-dPDFSETTINGS=/prepress (high quality, color preserving, 300 dpi imgs)
+-dPDFSETTINGS=/default  (almost identical to /screen)
+```
+
+- Ebook Size
+```
+/opt/homebrew/bin/gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=eunchurn_park_small.pdf eunchurn_park.pdf
+```
+
+- Printer size
+```
+/opt/homebrew/bin/gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=eunchurn_park_small_printer.pdf eunchurn_park.pdf
+```
+
+- Prepress size
+
+```
+/opt/homebrew/bin/gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=eunchurn_park_small_prepress.pdf eunchurn_park.pdf
+```
