@@ -21,9 +21,14 @@
 %% or LuaLaTeX.
 % \documentclass[10pt,a4paper,academicons]{altacv}
 
+\makeatletter
+   \def\input@path{{./latex-to-internet}}
+\makeatother
+
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
-\documentclass[10pt,a4paper,ragged2e]{altacv}
+\documentclass[10pt,a4paper,ragged2e,draft]{altacv}
+% \documentclass[markdown]{internet}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -49,7 +54,7 @@
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+% \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -66,7 +71,7 @@
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
   \usepackage[default]{lato}
-	\DeclareCaptionFont{}{\fontsize{5}{7}}
+	% \DeclareCaptionFont{}{\fontsize{5}{7}}
 \fi
 
 \usepackage{fontawesome}
@@ -157,6 +162,7 @@
 	\cvsection[page2sidebar]{Portfolio}
 
 	\input{portfolio}
+
   \clearpage
 	\cvsection[page2sidebar]{Portfolio(Side Project)}
   \input{portfolio_side.tex}

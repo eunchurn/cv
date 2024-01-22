@@ -109,3 +109,11 @@ cpan File::HomeDir
 ```
 /opt/homebrew/bin/gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=eunchurn_park_small_prepress.pdf eunchurn_park.pdf
 ```
+
+## Latex To Markdown
+
+```
+pandoc -s eunchurn_park.tex -o ./eunchurn_park.md
+pandoc -s portfolio.tex -o ./portfolio.md
+pandoc -s portfolio_side.tex -o ./portfolio_side.md
+```

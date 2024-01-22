@@ -3,15 +3,15 @@
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.recipes": [
     {
-      "name": "luatex only",
-      "tools": [
-        "lualatex"
-      ]
-    },
-    {
       "name": "pdflatex only",
       "tools": [
         "pdflatex"
+      ]
+    },
+    {
+      "name": "luatex only",
+      "tools": [
+        "lualatex"
       ]
     },
     {
