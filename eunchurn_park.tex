@@ -21,15 +21,16 @@
 %% or LuaLaTeX.
 % \documentclass[10pt,a4paper,academicons]{altacv}
 
-\makeatletter
-   \def\input@path{{./latex-to-internet}}
-\makeatother
+% \makeatletter
+%    \def\input@path{{./latex-to-internet}}
+% \makeatother
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
-\documentclass[10pt,a4paper,ragged2e,draft]{altacv}
+\documentclass[10pt,a4paper,ragged2e]{altacv}
 % \documentclass[markdown]{internet}
-
+\usepackage{xcolor}
+\usepackage{tabularx}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -54,14 +55,16 @@
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-% \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
 	\usepackage{fontspec}
+	\usepackage{emoji}
   \setmainfont{Pretendard}
+  \setemojifont{AppleColorEmoji}[Renderer=Harfbuzz]
 	\newfontfamily\pretendard{Pretendard}
 \DeclareCaptionFont{pretendard}{\fontsize{5}{7}\pretendard}
 \captionsetup{font=pretendard}
@@ -78,7 +81,9 @@
 \usepackage[cjk]{kotex}
 \usepackage[utf8]{inputenc}
 
+
 \usepackage[backend=biber]{biblatex}
+
 %% sample.bib contains your publications
 \addbibresource{eunchurn.bib}
 % \usepackage{dhucs-nanumfont}
@@ -87,6 +92,7 @@
 \definecolor{SlateGrey}{HTML}{35568A}
 \definecolor{LightGrey}{HTML}{3B4041}
 \definecolor{Pantone}{HTML}{BB2649}
+\definecolor{GrayBackground}{HTML}{F1F1EF}
 \colorlet{heading}{Pantone}
 \colorlet{accent}{Pantone}
 \colorlet{emphasis}{SlateGrey}
@@ -108,12 +114,14 @@
 	\email{eunchurn.park@gmail.com} \printinfo{\faBirthdayCake}{1980.07.05}
 	\phone{+82-10-4215-6420}
 	\location{Seoul, Republic of Korea}
+	\tagline{test}
 
 	%  \linkedin{linkedin.com/in/ismailshaikh}
-	\github{github.com/eunchurn} \printinfo{\faUniversity}{researchgate.net/profile/eunchurn\_park} \printinfo{\faHome}{https://eunchurn.com} \printinfo{\faFilePdfO}{https://github.com/eunchurn/cv/releases/download/0.0.1/eunchurn\_park.pdf} \printinfo{\faCoffee}{https://grateful-amethyst-4b7.notion.site/1a91b7f9da0d443f888aec63234a0d8a}
+	\github{github.com/eunchurn} \printinfo{\faUniversity}{researchgate.net/profile/eunchurn\_park} \printinfo{\faHome}{https://eunchurn.com} \printinfo{\faFilePdfO}{\href{https://github.com/eunchurn/cv/releases/download/0.0.1/eunchurn\_park.pdf}{이력서 (Full resolution) 다운로드}} \printinfo{\faCube}{\href{https://eunchurn.com/cv}{Notion CV 바로가기}}
 	%   \github{github.com/mmayer} % I'm just making this up though.
 	%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
+
 
 %% Make the header extend all the way to the right, if you want.
 \begin{fullwidth}
@@ -121,6 +129,13 @@
 \end{fullwidth}
 
 \AtBeginEnvironment{itemize}{\small}
+
+\linespread{1.1}\selectfont
+
+\begin{fullwidth}
+	\cvsection[page2sidebar]{Overview}
+	\input{overview}
+\end{fullwidth}
 
 % \cvsection[page1sidebar]{Experience}
 \begin{fullwidth}
@@ -141,7 +156,6 @@
 	\input{publications}
 \end{fullwidth}
 
-\clearpage
 \begin{fullwidth}
 	\cvsection[page2sidebar]{Awards}
 
@@ -163,9 +177,9 @@
 
 	\input{portfolio}
 
-  \clearpage
+	\clearpage
 	\cvsection[page2sidebar]{Portfolio(Side Project)}
-  \input{portfolio_side.tex}
+	\input{portfolio_side.tex}
 
 \end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd

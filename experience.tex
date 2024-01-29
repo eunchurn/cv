@@ -1,240 +1,273 @@
-\cvevent{Platform Part Lead / Full-stack}{(주)창소프트아이앤아이}{June 2022 -- now}{Seoul, Korea}
-\begin{itemize}
-	\item 빌더허브 플랫폼 개발 총괄 및 플랫폼 개발 본부 리딩
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: PoC 3개월, MVP 6개월, 출시버전 3개월
-		      \item 개발 인원: 4명
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item \href{https://builderhub.io}{홈 서비스} 개발(각 서비스들의 허브, 고객센터, 1:1문의, ChatOps, 설문조사 챗봇등)
-			            \item \href{https://auth.builderhub.io}{인증 서비스} 개발(회원가입, 로그인 세션, 마이페이지, 1:1문의 내역)
-			            \item \href{https://app.builderhub.io}{커스터머 서비스} 개발(프로젝트 등록, 프로젝트 공유, 프로젝트 히스토리, 결제시스템 등)
-			            \item \href{https://curation.builderhub.io/project/tester}{큐레이션 서비스} 개발(BIM 모델 3D 뷰어, 내역 필터 및 검색, 예상공사비, 자재 변경, 상세 내역, 공정 시뮬레이션, 공정표 제공)
-			            \item \href{https://partners.builderhub.io/}{파트너 서비스} 개발(파트너 등록 및 검수, 공공 API 및 공공 데이터 연동 파트너 정보 등록, 포트폴리오 등록, 블로그 및 콘텐츠 서비스)
+\cvevent{Platform Div Lead / Full-stack}{(주)창소프트아이앤아이}{June 2022 -- now}{Seoul, Korea}
+\begin{itemize}[label=\emoji{pushpin}]
+	\item 서비스 개발
+	      \begin{itemize}[label=\emoji{laptop}]
+		      \item \textbf{빌더허브 플랫폼 개발 총괄 및 플랫폼 개발}
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: PoC 3개월, MVP 6개월, 출시버전 3개월
+			            \item 개발 인원: 4명
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item \href{https://builderhub.io}{홈 서비스} 개발(각 서비스들의 허브, 고객센터, 1:1문의, ChatOps, 설문조사 챗봇등)
+				                  \item \href{https://auth.builderhub.io}{인증 서비스} 개발(회원가입, 로그인 세션, 마이페이지, 1:1문의 내역)
+				                  \item \href{https://app.builderhub.io}{커스터머 서비스} 개발(프로젝트 등록, 프로젝트 공유, 프로젝트 히스토리, 결제시스템 등)
+				                  \item \href{https://curation.builderhub.io/project/tester}{큐레이션 서비스} 개발(BIM 모델 3D 뷰어, 내역 필터 및 검색, 예상공사비, 자재 변경, 상세 내역, 공정 시뮬레이션, 공정표 제공)
+				                  \item \href{https://partners.builderhub.io/}{파트너 서비스} 개발(파트너 등록 및 검수, 공공 API 및 공공 데이터 연동 파트너 정보 등록, 포트폴리오 등록, 블로그 및 콘텐츠 서비스)
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item 1차 코드형 인프라(IaC: AWS Copilot, AWS CDK 2022.06 - 2022.10): AWS CloudFormation, Amplify, Cognito, ALB, RDS, Lambda, API Gateway, S3, CloudFront
+				                  \item 2차 코드형 인프라(IaC: Terraform 2022.11 - 2023.12): AWS ECS, RDS, Lambda, API Gateway, S3, CloudFront, SES 등
+				                  \item 3차 쿠버네티스 인프라(IaC: Terraform, Helm Chart 2023.12 - now): EKS, ELB, PostgreSQL, Prometheus, Grafana, ArgoCD, Github Action, Nginx, Supertokens 등
+			                  \end{itemize}
+			            \item 백엔드 개발 스택: TypeScript, NodeJS, Apollo Server, Code first GraphQL Schema, GraphQL Codegen, Nexus Framework, PalJS, OAS REST API 등
+			            \item 프론트엔드 개발 스택: TypeScript, NextJS, ReactJS, Redux toolkit, XState, Threejs, Autodesk Forge SDK
 		            \end{itemize}
-		      \item 인프라 구성:
-		            \begin{itemize}
-									\item 1차 코드형 인프라(IaC: AWS Copilot, AWS CDK 2022.06 - 2022.10): AWS CloudFormation, Amplify, Cognito, ALB, RDS, Lambda, API Gateway, S3, CloudFront
-									\item 2차 코드형 인프라(IaC: Terraform 2022.11 - 2023.12): AWS ECS, RDS, Lambda, API Gateway, S3, CloudFront, SES 등
-									\item 3차 쿠버네티스 인프라(IaC: Terraform, Helm Chart 2023.12 - now): EKS, ELB, PostgreSQL, Prometheus, Grafana, ArgoCD, Github Action, Nginx, Supertokens 등
+		      \item \textbf{\href{https://check.builderhub.io/signin}{스마트체커}(철근 모니터링 시스템, 시공사 대상 B2B) 프로젝트 개발}
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 3개월
+			            \item 개발 인원: 4명
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 스마트체커 서비스: 자사 솔루션 제품 데이터(Builderhub Q, 2DShopPro)를 활용한 철근 물량 검토 서비스
+				                  \item 파일클라우드: 웹하드 대체를 위한 파일클라우드 개발
+				                  \item 이슈 트래킹: 도면 또는 자체 이슈들을 관리하기 위한 이슈관리 서비스 개발
+				                  \item 도면 컨버터 개발: 철근 샵도면을 읽어 물량 정보 및 메타데이터를 추출 및 도면 뷰어를 위한 데이터 컨버팅
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item 쿠버네티스 인프라 구성: EKS, ELB, Prometheus, Grafana, ArgoCD, Github Action, Nginx, Supertokens 등
+				                  \item Turbo Repo 구성: 모노 리포지토리에서 모든 앱과 패키지들을 통합하여 관리 및 배포
+			                  \end{itemize}
+			            \item 백엔드 개발 스택: TypeScript, NodeJS, Apollo Server, Code first GraphQL Schema, GraphQL Codegen, Nexus Framework, PalJS, OAS REST API 등
+			            \item 프론트엔드 개발 스택: TypeScript, NextJS, ReactJS, Redux toolkit
 		            \end{itemize}
-		      \item 백엔드 개발 스택: TypeScript, NodeJS, Apollo Server, Code first GraphQL Schema, GraphQL Codegen, Nexus Framework, PalJS, OAS REST API 등
-		      \item 프론트엔드 개발 스택: TypeScript, NextJS, ReactJS, Redux toolkit, XState, Threejs, Autodesk Forge SDK
+		      \item 건축 감리 B2B 프로젝트 개발: \href{https://asec.builderhub.io/dashboard/detail/initial/supervision}{DEMO}
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 3주
+			            \item 개발 인원: 2명
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 건축 공정표와 공정 체크리스트
+				                  \item 모델 연동
+				                  \item 공장 가공 철근 부재별 체크하여 사진 업로드
+				                  \item URL에 해당 데이터 저장 및 S3 이미지 업로드
+				                  \item URL Shortener, 공장 가공 철근 QR Code 연동
+			                  \end{itemize}
+		            \end{itemize}
 	      \end{itemize}
-	\item \href{https://check.builderhub.io/signin}{스마트체커}(철근 모니터링 시스템, 시공사 대상 B2B) 프로젝트 개발
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 3개월
-		      \item 개발 인원: 4명
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 스마트체커 서비스: 자사 솔루션 제품 데이터(Builderhub Q, 2DShopPro)를 활용한 철근 물량 검토 서비스
-			            \item 파일클라우드: 웹하드 대체를 위한 파일클라우드 개발
-			            \item 이슈 트래킹: 도면 또는 자체 이슈들을 관리하기 위한 이슈관리 서비스 개발
-			            \item 도면 컨버터 개발: 철근 샵도면을 읽어 물량 정보 및 메타데이터를 추출 및 도면 뷰어를 위한 데이터 컨버팅
-		            \end{itemize}
-		      \item 인프라 구성:
-		            \begin{itemize}
-			            \item 쿠버네티스 인프라 구성: EKS, ELB, Prometheus, Grafana, ArgoCD, Github Action, Nginx, Supertokens 등
-			            \item Turbo Repo 구성: 모노 리포지토리에서 모든 앱과 패키지들을 통합하여 관리 및 배포
-		            \end{itemize}
-		      \item 백엔드 개발 스택: TypeScript, NodeJS, Apollo Server, Code first GraphQL Schema, GraphQL Codegen, Nexus Framework, PalJS, OAS REST API 등
-		      \item 프론트엔드 개발 스택: TypeScript, NextJS, ReactJS, Redux toolkit
-	      \end{itemize}
-	\item 건축 감리 B2B 프로젝트 개발: \href{https://asec.builderhub.io/dashboard/detail/initial/supervision}{DEMO}
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 3주
-		      \item 개발 인원: 2명
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 건축 공정표와 공정 체크리스트
-			            \item 모델 연동
-			            \item 공장 가공 철근 부재별 체크하여 사진 업로드
-			            \item URL에 해당 데이터 저장 및 S3 이미지 업로드
-			            \item URL Shortener, 공장 가공 철근 QR Code 연동
-		            \end{itemize}
-	      \end{itemize}
-	\item 플랫폼 본부 리딩 (구성원 13인)
-	      \begin{itemize}[label=$\star$]
+	\item 개발 리딩: 플랫폼 본부 리딩(구성원 13인)
+	      \begin{itemize}[label=\emoji{round-pushpin}]
 		      \item \href{https://organization-pjk.gitbook.io/developer-ojt-program/}{온보딩 OJT 프로그램 개발}
 		      \item 매주 개발팀 코드리뷰 세미나, 프론트\&UX팀 세미나
 		      \item DX 중심의 생산성을 위한 개발 방법: DB에서 부터 클라이언트까지 Type-safe pipeline, GitOps 배포 파이프라인 및 Unit Test 워크플로우
 		      \item 인프라 관리: 코드형 인프라 Terraform 으로 모든 인프라 스테이지별(dev, QA, prod) 관리
 		      \item 프로젝트 관리: Jira 로드맵, 애자일(스프린트 개발 방식) 일부 요소 적용
-		      \item 운영팀 관리: Jira 이슈, 운영을 위한 서비스 앱개발(ElectronJS: 솔루션 산출물 및 데이터를 어드민을 거치지 않고 모든 데이터 동기화), 고객 이벤트(결제, 결제오류, 프로젝트 상태변경) 대응(Slack, ChannelTalk), 카카오 알림톡 (고객 중요 알림, 중복 송출 방지를 위한 운영 알림), 이메일 서비스(고객 알림, 캠페인) 자체 개발, Home  앱 Notion API로 콘텐츠 관리
-		      \item SNS 마케팅 및 SEO: 고객 유입경로 추적 및 메트릭 수집, 검색엔진 최적화
+		      \item 운영팀 관리: Jira 이슈, 운영을 위한 서비스 앱개발(ElectronJS: 솔루션 산출물 및 데이터를 어드민을 거치지 않고 모든 데이터 동기화), 고객 이벤트(결제, 결제오류, 프로젝트 상태변경) 대응(Slack, ChannelTalk), 카카오 알림톡 (고객 중요 알림, 중복
+		            송출 방지를 위한 운영 알림), 이메일 서비스(고객 알림, 캠페인) 자체 개발, Home 앱 Notion API로 콘텐츠 관리
+		            - SNS 마케팅 및 SEO: 고객 유입경로 추적 및 메트릭 수집, 검색엔진 최적화
 	      \end{itemize}
+	\item[\emoji{high-voltage}]
+		\colorbox{GrayBackground}{
+			\begin{minipage}{1.65\textwidth}
+				플랫폼 개발본부를 리드하면서, 자사 솔루션 제품군(국내 30위 이내 대형건설사 전용)을 중소형 건설사 혹은 건축설계사, 건축주등 \textbf{다양한 건축 관계자들에게 견적 서비스를 제공해주는 형태의 플랫폼 개발을 책임}지게 되었습니다. 솔루션 제품군의 높은 가격대로 접근성이 어려웠던 3D 기반 적산 소프트웨어를 저렴하게 사용하고자 하는 요구를 충족시키기 위해 낮은 가격과 프로젝트 단위의 적산과 견적 그리고 웹기반의 3D BIM 모델을 제공하면서 도면 오류체크, 공내역서 및 수량산출서를 제공하는 서비스를 출시하였습니다. 이후 여러 B2B 비즈니스 모델을 추가하면서 건축 플레이어들의 허브가 되기 위한 비전을 가지고 플랫폼을 만들어가고 있습니다. 플랫폼 본부를 리드하면서 구성원들의 강점을 기반으로 업무 분배를 하였고 기획자, 디자이너, 개발자 모두 기획단계에서부터 의견을 제시하고 창의력을 발휘할 수 있도록 독려하였고 개발 구성원들에게 Peer to peer 코드리뷰를 지속적으로 진행, 1주일에 한번 정기적인 세미나와 코드리뷰를 진행하고 지속적으로 동기부여와 멘토링하여 구성원들의 성장을 드라이브하였습니다.
+			\end{minipage}
+		}
 \end{itemize}
 
 \divider
 
 \cvevent{Dev Lead / Full-stack}{(주)단비코리아}{Jan 2020 -- June 2022}{Seoul, Korea}
-\begin{itemize}
-	\item AD.Fi: 인터넷 WiFi 공유기 광고 시스템(매장 광고 송출, 광고 관리, 매장, 브랜드, 영업사원, 대리점, 총판 관리) 개발
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 6개월
-		      \item 유지관리 기간: 18개월
-		      \item 개발 인원: 5명
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 공유기 광고 송출 페이지: Captive Portal 광고 노출 및 인터넷 연결 허용
-			            \item 광고 집계 및 광고 관리 백오피스: 매장주, 영업사원, 대리점, 총판, 브랜드, 브랜드그룹 어드민
-			            \item 타겟광고 트래킹 시스템 개발
+
+\begin{itemize}[label=\emoji{pushpin}]
+	\item 서비스 개발
+	      \begin{itemize}[label=\emoji{laptop}]
+		      \item AD.Fi: 인터넷 WiFi 공유기 광고 시스템(매장 광고 송출, 광고 관리, 매장, 브랜드, 영업사원, 대리점, 총판 관리) 개발
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 6개월
+			            \item 유지관리 기간: 18개월
+			            \item 개발 인원: 5명
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 공유기 광고 송출 페이지: Captive Portal 광고 노출 및 인터넷 연결 허용
+				                  \item 광고 집계 및 광고 관리 백오피스: 매장주, 영업사원, 대리점, 총판, 브랜드, 브랜드그룹 어드민
+				                  \item 타겟광고 트래킹 시스템 개발
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item AWS EC2, CodePipeline, AutoScalingGroup, S3, Lambda
+				                  \item Linux system daemon(systemd) and timer
+				                  \item Docker swarm stack: Microservice containers
+			                  \end{itemize}
+			            \item 백엔드 개발 스택
+			                  \begin{itemize}
+				                  \item Type-safe pipeline: TypeScript, NodeJS, Express, Apollo Server, Prisma ORM, Nexus GraphQL, Open API Spec. v3
+				                  \item Code-first GraphQL schema: Nexus-GraphQL
+				                  \item Asynchronosus API: Mosquitto, MQTTjs, Async API
+			                  \end{itemize}
+			            \item 프론트 개발 스택
+			                  \begin{itemize}
+				                  \item TypeScript, ReactJS, Context API, Material UI, Styled Component, JSS
+				                  \item GraphQL-codegen(React, Apollo-client)
+			                  \end{itemize}
 		            \end{itemize}
-		      \item 인프라 구성:
-		            \begin{itemize}
-			            \item AWS EC2, CodePipeline, AutoScalingGroup, S3, Lambda
-			            \item Linux system daemon(systemd) and timer
-			            \item Docker swarm stack: Microservice containers
+		      \item Log.Fi(매장 코로나 19 방명록) 개발
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 2주
+			            \item 개발 인력: 1인
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 체크인 페이지: Captive Portal 브라우저에서 방문자 기록
+				                  \item 어드민 개발: 사용자 리스트
+				                  \item 이후 공유기 설정 및 등록 페이지로 활용, 공유기 가등록 및 판매
+			                  \end{itemize}
 		            \end{itemize}
-		      \item 백엔드 개발 스택
-		            \begin{itemize}
-			            \item Type-safe pipeline: TypeScript, NodeJS, Express, Apollo Server, Prisma ORM, Nexus GraphQL, Open API Spec. v3
-			            \item Code-first GraphQL schema: Nexus-GraphQL
-			            \item Asynchronosus API: Mosquitto, MQTTjs, Async API
+		      \item Lucky.Fi(매장 경품추첨 앱) 개발
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 4주
+			            \item 개발 인력: 5인
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 룰렛 게임: Captive Portal 브라우저에서 룰렛게임, 당첨자 회원가입
+				                  \item 상품 연동: 쿠프마케팅 기프티콘, 밀크코인
+				                  \item 코인 적립: SRT 코인 적립
+				                  \item 브라우저 핑거프린트: 사용자 특정 및 매장 방문 확인
+			                  \end{itemize}
 		            \end{itemize}
-		      \item 프론트 개발 스택
-		            \begin{itemize}
-			            \item TypeScript, ReactJS, Context API, Material UI, Styled Component, JSS
-			            \item GraphQL-codegen(React, Apollo-client)
+		      \item 강릉시 공공 WiFi 개발, 코엑스 전시장 AD.Fi 서비스
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 4주
+			            \item 개발 인력: 2인
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item 공공 와이파이 연동: Xirrus, Meraki, Lucus 공유기 연동, Grant API 개발
+				                  \item RADIUS 인증 연동: 자사 RADIUS 서버 연동, 사용자 정보 트래킹
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item Bare Metal 서버 구축
+				                  \item Docker swarm stack: Traefik, MongoDB Cluster
+			                  \end{itemize}
+			            \item 풀 개발 스택
+			                  \begin{itemize}
+				                  \item TypeScript, NodeJS, NextJS, Prisma ORM(MongoDB), Redux Toolkit Query
+				                  \item GraphQL-codegen(Apollo-client)
+			                  \end{itemize}
+		            \end{itemize}
+		      \item Cash.Fi(매장 모객 서비스) 백엔드 개발
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 총 개발 기간: 19개월 (외주 관리)
+			            \item 해당 개발 기간: 6주
+			            \item 개발 인력: 1인
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item WiFi indoor position: WiFi 공유기와 Captive portal 연동, 매장 내부 위치 트래킹
+				                  \item WiFi 공유기 매장 fingerprint 수집: 공유기 AP를 이용 매장 특정 Fingerprint 개발(7종의 ML 알고리즘)
+				                  \item 외주 개발 백엔드 마이그레이션: DB 마이그레이션, AD-Fi 매장 연동
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item AWS EC2, RDS, S3, Lambda, CloudFront
+				                  \item Docker swarm stack: Traefik
+			                  \end{itemize}
+			            \item 백엔드 스택
+			                  \begin{itemize}
+				                  \item TypeScript, NodeJS, Express, Apollo Server, Prisma ORM
+			                  \end{itemize}
 		            \end{itemize}
 	      \end{itemize}
-	\item Log.Fi(매장 코로나 19 방명록) 개발
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 2주
-		      \item 개발 인력: 1인
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 체크인 페이지: Captive Portal 브라우저에서 방문자 기록
-			            \item 어드민 개발: 사용자 리스트
-			            \item 이후 공유기 설정 및 등록 페이지로 활용, 공유기 가등록 및 판매
-		            \end{itemize}
-	      \end{itemize}
-	\item Lucky.Fi(매장 경품추첨 앱) 개발
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 4주
-		      \item 개발 인력: 5인
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 룰렛 게임: Captive Portal 브라우저에서 룰렛게임, 당첨자 회원가입
-			            \item 상품 연동: 쿠프마케팅 기프티콘, 밀크코인
-			            \item 코인 적립: SRT 코인 적립
-			            \item 브라우저 핑거프린트: 사용자 특정 및 매장 방문 확인
-		            \end{itemize}
-	      \end{itemize}
-	\item 강릉시 공공 WiFi 개발, 코엑스 전시장 AD.Fi 서비스
-	      \begin{itemize}[label=$\star$]
-		      \item 개발 기간: 4주
-		      \item 개발 인력: 2인
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item 공공 와이파이 연동: Xirrus, Meraki, Lucus 공유기 연동, Grant API 개발
-			            \item RADIUS 인증 연동: 자사 RADIUS 서버 연동, 사용자 정보 트래킹
-		            \end{itemize}
-		      \item 인프라 구성:
-		            \begin{itemize}
-			            \item Bare Metal 서버 구축
-			            \item Docker swarm stack: Traefik, MongoDB Cluster
-		            \end{itemize}
-		      \item 풀 개발 스택
-		            \begin{itemize}
-			            \item TypeScript, NodeJS, NextJS, Prisma ORM(MongoDB), Redux Toolkit Query
-			            \item GraphQL-codegen(Apollo-client)
-		            \end{itemize}
-	      \end{itemize}
-	\item Cash.Fi(매장 모객 서비스) 백엔드 개발
-	      \begin{itemize}[label=$\star$]
-		      \item 총 개발 기간: 19개월 (외주 관리)
-          \item 해당 개발 기간: 6주
-		      \item 개발 인력: 1인
-		      \item 개발한 서비스
-		            \begin{itemize}
-			            \item WiFi indoor position: WiFi 공유기와 Captive portal 연동, 매장 내부 위치 트래킹
-			            \item WiFi 공유기 매장 fingerprint 수집: 공유기 AP를 이용 매장 특정 Fingerprint 개발(7종의 ML 알고리즘)
-			            \item 외주 개발 백엔드 마이그레이션: DB 마이그레이션, AD-Fi 매장 연동
-		            \end{itemize}
-		      \item 인프라 구성:
-		            \begin{itemize}
-			            \item AWS EC2, RDS, S3, Lambda, CloudFront
-			            \item Docker swarm stack: Traefik
-		            \end{itemize}
-		      \item 백엔드 스택
-		            \begin{itemize}
-			            \item TypeScript, NodeJS, Express, Apollo Server, Prisma ORM
-		            \end{itemize}
-	      \end{itemize}
-	\item 개발팀 리딩 (구성원 7명)
-	      \begin{itemize}[label=$\star$]
+	\item 개발 리딩 (구성원 7명)
+	      \begin{itemize}[label=\emoji{round-pushpin}]
 		      \item 코드 리뷰 문화 지향, 매주 세미나 개최, 신입 개발자를 위한 OJT 프로그램 구축, 개발자 함수형 프로그래밍 지향 훈련
 		      \item TDD 개발: 의존성 코드 유닛 테스트 mock을 활용, 로직과 의존성 코드 분리, 높은 coverage
 		      \item 벤더 지식은 꼭 필요한 스택만 학습하며, 프로젝트에 도움이 되는 밴더 지식이라면 각자 연구하여 공유
 		      \item 개발 방법론 (생산성, 안정성, 테스트)에 집중, 프로그래밍 언어 자체의 기본기를 우선함. 또한 새로운 언어를 학습을 장려
 		      \item 모든 프로젝트 배포 자동화
 	      \end{itemize}
+	\item[\emoji{high-voltage}]
+		\colorbox{GrayBackground}{
+			\begin{minipage}{1.65\textwidth}
+				개발팀을 리드하며 레거시 프로덕트를 리빌드를 수행, 안정적인 서비스 상태를 유지하였습니다. \textbf{WiFi 공유기를 이용하여 각 매장의 매출 독려와 광고수익을 창출하는 브랜드 이름 Fi 를 중심으로 여러 비즈니스 모델과 서비스}를 만들어냈고, 실제 매출로 이어졌습니다. 협력사 그리고 매장을 이용하는 고객의 사용자 경험을 중요하게 생각하여, 빠르게 매장을 체크인할 수 있도록 하는 브라우저 성능 개선, \textbf{공공WiFi 서비스 및 Captive portal 브라우저에서의 경험할 수 있는 고객 서비스에 초점을 맞추어 개발}을 진행하였습니다. 개발팀을 이끄는 리더로서 매일 코드리뷰와 멘토링을 하였고 주 1회 세미나를 하여 신입과 주니어 개발자들을 이후 몇몇은 관리자급으로 성장시켰습니다.
+			\end{minipage}
+		}
 \end{itemize}
+
+
 
 \divider
 
 \cvevent{Full-stack developer \& PI in R\&D}{APROS CO., LTD.}{Mar 2018 -- Dec 2019}{Seoul, Korea}
-\begin{itemize}
-	\item 스마트팩토리 IIoT PdM 플랫폼 개발: Linux Application(Gateway), IIoT Protocol, Web Application(Full-stack: Docker-composer, NodeJS, Python, MongoDB, Redis, GraphQL, ReactJS,$\cdots$).
-  \begin{itemize}[label=$\star$]
-    \item 개발 기간: 12개월
-    \item 개발 인력: 1인
-    \item 개발한 서비스
-    \begin{itemize}
-      \item Anomaly detection: 기계의 이상 상태 탐지, 알람(SMS), 이상상태 기록
-      \item Diagnosis: 주파수 분석과 Leveling을 통한 기계 상태 진단, 알람(SMS)
-      \item Prognosis: 기계 상태의 향후 예측(ex. 6개월 후 점검 및 부품 교체 필요)
-      \item 사용자 인증, 히스토리 데이터, Featured data(ADP) 기록 상태
-    \end{itemize}
-    \item 인프라 구성:
-    \begin{itemize}
-      \item Bare metal(Ubuntu), AWS EC2(MQTT Broker), Docker, Redis
-      \item Gateway: Artik 7, Preempt\_RT Linux, IPC
-    \end{itemize}
-    \item 백엔드 개발 스택:
-    \begin{itemize}
-      \item JavaScript(ES6), Express, NodeJS, Python, MongoDB, Redis, GraphQL(GraphQL yoga)
-      \item Gateway: NodeJS, Python, golang, C++, N-API, Redis
-    \end{itemize}
-    \item 프론트 개발 스택:
-    \begin{itemize}
-      \item JavaScript(ES6), Babel, ReactJS
-    \end{itemize}
-  \end{itemize}
-	\item 멀티채널 DAQ 애플리케이션 개발
-	\begin{itemize}
-    \item 개발 기간: 6개월
-    \item 개발 인력: 1인
-    \item 개발 내용:
-    \begin{itemize}
-      \item 4채널 유선 데이터 송수신 모듈: SPI 인터페이스, TI SX1274 AD컨버터 설계 지원
-      \item DSP 칩 Embeded(FPGA) 펌웨어 개발
-      \item 1채널 802.11 무선 데이터 송수신 모듈: WiFi 인터페이스
-      \item 시리얼 통신 후 엣지 컴퓨팅, Featured data 추출(RMS, Skewness, Kurtosis, Cepstrum, FFT, Signal decomposigion)
-      \item 서버 데이터 전송: 평상시 Featured data, 이상감지 후 모든 데이터 송신: MQTT broker
-    \end{itemize}
-    \item 개발 스택: RT Linux Kernel patch(Yocto, Xenomai, Preempt\_RT), NodeJS N-API, golang C(POSIX).
-  \end{itemize}
-	\item IIoT 보안 펌웨어 개발: X.509 경량화 인증서 개발
-	\item 스마트팩토리 관련 R\&D 프로젝트
+
+\begin{itemize}[label=\emoji{pushpin}]
+	\item 개발 프로젝트
+	      \begin{itemize}[label=\emoji{laptop}]
+		      \item 스마트팩토리 IIoT PdM 플랫폼 개발: Linux Application(Gateway), IIoT Protocol, Web Application(Full-stack: Docker-composer, NodeJS, Python, MongoDB, Redis, GraphQL, ReactJS,$\cdots$).
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 12개월
+			            \item 개발 인력: 1인
+			            \item 개발한 서비스
+			                  \begin{itemize}
+				                  \item Anomaly detection: 기계의 이상 상태 탐지, 알람(SMS), 이상상태 기록
+				                  \item Diagnosis: 주파수 분석과 Leveling을 통한 기계 상태 진단, 알람(SMS)
+				                  \item Prognosis: 기계 상태의 향후 예측(ex. 6개월 후 점검 및 부품 교체 필요)
+				                  \item 사용자 인증, 히스토리 데이터, Featured data(ADP) 기록 상태
+			                  \end{itemize}
+			            \item 인프라 구성:
+			                  \begin{itemize}
+				                  \item Bare metal(Ubuntu), AWS EC2(MQTT Broker), Docker, Redis
+				                  \item Gateway: Artik 7, Preempt\_RT Linux, IPC
+			                  \end{itemize}
+			            \item 백엔드 개발 스택:
+			                  \begin{itemize}
+				                  \item JavaScript(ES6), Express, NodeJS, Python, MongoDB, Redis, GraphQL(GraphQL yoga)
+				                  \item Gateway: NodeJS, Python, golang, C++, N-API, Redis
+			                  \end{itemize}
+			            \item 프론트 개발 스택:
+			                  \begin{itemize}
+				                  \item JavaScript(ES6), Babel, ReactJS
+			                  \end{itemize}
+		            \end{itemize}
+		      \item 멀티채널 DAQ 애플리케이션 개발
+		            \begin{itemize}[label=\emoji{round-pushpin}]
+			            \item 개발 기간: 6개월
+			            \item 개발 인력: 1인
+			            \item 개발 내용:
+			                  \begin{itemize}
+				                  \item 4채널 유선 데이터 송수신 모듈: SPI 인터페이스, TI ADS1274 AD컨버터 설계 지원
+				                  \item DSP 칩 Embeded(FPGA) 펌웨어 개발
+				                  \item 1채널 802.11 무선 데이터 송수신 모듈: WiFi 인터페이스
+				                  \item SPI통신, 데이터 파서, 엣지 컴퓨팅, Featured data 추출(RMS, Skewness, Kurtosis, Cepstrum, FFT, Signal decomposigion)
+				                  \item 서버 데이터 전송: 평상시 Featured data, 이상감지 후 모든 데이터 송신: MQTT broker
+			                  \end{itemize}
+			            \item 개발 스택: RT Linux Kernel patch(Yocto, Xenomai, Preempt\_RT), NodeJS N-API, golang C(POSIX).
+		            \end{itemize}
+		      \item IIoT 보안 펌웨어 개발: X.509 경량화 인증서 개발
+		      \item 스마트팩토리 관련 R\&D 프로젝트
+	      \end{itemize}
 \end{itemize}
 
 \divider
 
 \cvevent{Full-stack developer \& Project Team Leader \& PI in R\&D}{S.H. Tech. \& Policy Institute}{Aug. 2015 -- Jan. 2018}{Seoul, Korea}
-\begin{itemize}
-	\item 재난 대응 M2M 시스템 개발: 센서 모니터링 플랫폼 개발(Full-stack: NodeJS, Redis, MongoDB, Python), 센서 데이터 기반 주요요소분석 및 Markov-chain룰 기반 상태예측 알고리즘 개발, 현장 Deployment 수행
-	\item 한국철도공사 관련 프로젝트 개발: OpenCV기반 재해우려개소 낙석감지 시스템, OpenCV 기반 KTX 승객검표지원 시스템, 콘크리트 도상 균열 식별 프로그램 개발
-	\item 수자원공사 및 한국철도공사 R\&D 프로젝트 수행: 연구책임자
+
+\begin{itemize}[label=\emoji{pushpin}]
+	\item 개발 프로젝트
+	      \begin{itemize}[label=\emoji{laptop}]
+		      \item 재난 대응 M2M 시스템 개발: 센서 모니터링 플랫폼 개발(Full-stack: NodeJS, Redis, MongoDB, Python), 센서 데이터 기반 주요요소분석 및 칼만 필터 기반 상태예측 알고리즘 개발, 현장 Deployment 수행
+		      \item 한국철도공사 관련 프로젝트 개발: OpenCV기반 재해우려개소 낙석감지 시스템, OpenCV 기반 KTX 승객검표지원 시스템, 콘크리트 도상 균열 식별 프로그램 개발
+		      \item 수자원공사 및 한국철도공사 R\&D 프로젝트 수행: 연구책임자
+	      \end{itemize}
 \end{itemize}
 
 \divider
 
 \cvevent{Research Engineer \& Algorithm developer}{Korea Maintenance CO., LTD.}{Apr. 2009 -- May 2015}{Seoul, Korea}
-\begin{itemize}
-	\item 초고층 건물의 GPS 망보정기법과 외란보정 기법을 이용한 거푸집 연직도 관리 (MR-Kalman Filter, GNSS-RTK, OPA, FLC, application), 건설신기술 인증 국토해양부고시 제2011-313호
-	\item 한국철도공사 공항철도 및 KTX 진동가속도 분석 시스템: 주행안정성 평가 알고리즘, slip/slide, 승차감 분석 알고리즘 (CWA-FRF, ISO 2631-1, UIC-513, UIC-518OR)
-	\item LCD Display 글래스 이송로봇 사전감지시스템(EWS) 개발: 로봇설비의 Predictive maintenance, HMB-SD, Wavelet analysis, Cepstrum analysis
-	\item 초고층 건물 구조 건전도 모니터링(SHM) 및 A-TMD 모니터링 시스템 개발: 고감도 가속도 센서(144dB) 기반 DAQ 개발, 시각동기화기술(IEEE-1588 PTP, Kalman filter), EPGA, SSI 알고리즘
+\begin{itemize}[label=\emoji{pushpin}]
+	\item 개발 프로젝트
+	      \begin{itemize}[label=\emoji{laptop}]
+		      \item 초고층 건물의 GPS 망보정기법과 외란보정 기법을 이용한 거푸집 연직도 관리 (MR-Kalman Filter, GNSS-RTK, OPA, FLC, application), 건설신기술 인증 국토해양부고시 제2011-313호
+		      \item 한국철도공사 공항철도 및 KTX 진동가속도 분석 시스템: 주행안정성 평가 알고리즘, slip/slide, 승차감 분석 알고리즘 (CWA-FRF, ISO 2631-1, UIC-513, UIC-518OR)
+		      \item LCD Display 글래스 이송로봇 사전감지시스템(EWS) 개발: 로봇설비의 Predictive maintenance, HMB-SD, Wavelet analysis, Cepstrum analysis
+		      \item 초고층 건물 구조 건전도 모니터링(SHM) 및 A-TMD 모니터링 시스템 개발: 고감도 가속도 센서(144dB) 기반 DAQ 개발, 시각동기화기술(IEEE-1588 PTP, Kalman filter), EPGA, SSI 알고리즘
+	      \end{itemize}
 \end{itemize}

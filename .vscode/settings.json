@@ -3,12 +3,6 @@
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.recipes": [
     {
-      "name": "pdflatex only",
-      "tools": [
-        "pdflatex"
-      ]
-    },
-    {
       "name": "luatex only",
       "tools": [
         "lualatex"
@@ -18,6 +12,18 @@
       "name": "xelatex only",
       "tools": [
         "xelatex"
+      ]
+    },
+    {
+      "name": "luatex only",
+      "tools": [
+        "lualatex"
+      ]
+    },
+    {
+      "name": "pdflatex only",
+      "tools": [
+        "pdflatex"
       ]
     },
     {
@@ -36,6 +42,15 @@
         "biber",
         "xelatex",
         "xelatex"
+      ]
+    },
+    {
+      "name": "luatex -> biber -> luatex -> luatex",
+      "tools": [
+        "lualatex",
+        "biber",
+        "lualatex",
+        "lualatex"
       ]
     }
   ],
