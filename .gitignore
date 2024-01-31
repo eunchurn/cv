@@ -273,3 +273,7 @@ TSWLatexianTemp*
 *.lpz
 
 __latexindent_temp.tex
+
+# MacOS
+
+.DS_Store
